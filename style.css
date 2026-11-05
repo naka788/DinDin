@@ -18,6 +18,7 @@ header {
     text-decoration: none;
     font-size: 52px;
     font-weight: bold;
+    font-family: Poppins;
 }
 
 .logo span {
@@ -31,7 +32,26 @@ header {
 }
 
 .paginas a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     color: #FFFFFF;
     text-decoration: none;
     font-size: 19px;
+    font-family: Poppins;
+}
+
+.paginas .botaoCalculadora {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4DF5E8; /* Ciano vibrante */
+    color: #1E1E1E;          /* Texto preto para alto contraste */
+    padding: 12px 24px;        /* Espaçamento interno (altura e largura) */
+    border-radius: 8px;        /* Bordas arredondadas como na imagem */
+    text-decoration: none;     /* Remove o sublinhado de link */
+    font-size: 15px;
+    font-weight: 600;          /* Texto levemente em negrito */
+    transition: background-color 0.2s ease, transform 0.1s ease;
+
 }
