@@ -181,6 +181,28 @@ header {
     color: #DDDDDD;
     margin-bottom: 16px;
 }
+
+.secaoTexto2 {
+    margin-top: 50px;
+}
+
+.secaoTexto2 h2 {
+    color: #FFFFFF;
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.listaTexto2 {
+    list-style: none;
+    font-size: 18px;
+    padding-left: 20px;
+    border-left: 3px solid #00E676;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
 /* Secao de Texto FIM */
 
 /*Homepage FIM*/
