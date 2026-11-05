@@ -147,4 +147,17 @@ header {
 .logoTitulo label{
     color: #00E676;
 }
+
+/*carrossel INICIO*/
+.carousel slide{
+
+}
+.textoCarrossel {
+  background-color:black;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;     
+}
+
+/*carrossel FIM*/
 /*Homepage FIM*/
