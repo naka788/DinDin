@@ -12,7 +12,7 @@ header {
     border-bottom: 4px solid #00E676;
 }
 
-
+/*barra de navegação INICIO*/
 .logo {
     color: #FFFFFF;
     text-decoration: none;
@@ -55,7 +55,7 @@ header {
     transition: background-color 0.2s ease, transform 0.1s ease;
 
 }
-
+/*barra de navegação FIM*/
 
 /*botao de modo escuro INICIO*/
 .toggleEscuro {
@@ -64,7 +64,7 @@ header {
     padding: 15px;
 }
 
-.toggleEscuro label {
+.toggleEscuro a {
     color: white;
     margin-left: 10px;
     font-family: Poppins
@@ -112,3 +112,39 @@ header {
     left: 23px; 
 }
 /*botao de modo escuro FIM*/
+
+/*Homepage INICIO*/
+.conteudoHomepage {
+    max-width: 1000px;
+    margin: 40px;
+    padding: 20px;
+    font-family: 'Poppins';
+    color: #FFFFFF;
+}
+
+.secaoTopo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.tituloPrincipal {
+    width: 70%;
+    font-size: 40px;
+    line-height: 1.4;
+}
+.tituloPrincipal .textoDestacadoTitulo {
+    color: #00E676;
+
+}
+
+.logoTitulo {
+    font-size: 80px;
+    font-weight: bold;
+    
+}
+
+.logoTitulo label{
+    color: #00E676;
+}
+/*Homepage FIM*/
