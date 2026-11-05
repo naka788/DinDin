@@ -21,6 +21,11 @@ header {
     font-family: Poppins;
 }
 
+.logo:hover {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
 .logo label {
     color: #00E676;
 }
@@ -64,7 +69,7 @@ header {
     padding: 15px;
 }
 
-.toggleEscuro a {
+.toggleEscuro label {
     color: white;
     margin-left: 10px;
     font-family: Poppins
@@ -116,7 +121,7 @@ header {
 /*Homepage INICIO*/
 .conteudoHomepage {
     max-width: 1000px;
-    margin: 40px;
+    margin: 32px auto;
     padding: 20px;
     font-family: 'Poppins';
     color: #FFFFFF;
@@ -129,7 +134,7 @@ header {
     margin-bottom: 40px;
 }
 .tituloPrincipal {
-    width: 70%;
+    width: 50%;
     font-size: 40px;
     line-height: 1.4;
 }
