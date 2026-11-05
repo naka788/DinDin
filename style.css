@@ -154,9 +154,6 @@ header {
 }
 
 /*carrossel INICIO*/
-.carousel slide{
-
-}
 .textoCarrossel {
   background-color:black;
   color: #ffffff;
@@ -165,4 +162,25 @@ header {
 }
 
 /*carrossel FIM*/
+
+/* Secao de Texto INICIO */
+.secaoTexto {
+    margin-top: 40px;
+}
+
+.secaoTexto h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+}
+
+.secaoTexto p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #DDDDDD;
+    margin-bottom: 16px;
+}
+/* Secao de Texto FIM */
+
 /*Homepage FIM*/
