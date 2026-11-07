@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="João Pedro Nakazoni, Guilherme Rivera">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
-    <title>Calculadora</title>
+    <title>Calculadora de Compra</title>
 </head>
 <body>
+    
     <header>
-        
         <a href="index.html" class="logo">dindin<label>.</label></a>
         <nav class="paginas">
             <a href="/paginas/primeirosPassos.html">Primeiros Passos</a>
@@ -20,11 +21,165 @@
     </header>
 
     <div class="toggleEscuro">
-    <label class="switch">
-        <input type="checkbox" checked>
-        <div class="slider"></div> 
-    </label>
-    <label>Modo Escuro</label>
+        <label class="switch">
+            <input type="checkbox" checked>
+            <div class="slider"></div> 
+        </label>
+        <label>Modo Escuro</label>
     </div>
+
+    <main class="conteudoCalculadora">
+        <h1 class="page-title">Simulador de Compra</h1>
+
+        <div class="layout-grid">
+            
+            <form id="form-compra" class="card card-neon">
+                <h2>Seu Planejamento</h2>
+                
+                <fieldset>
+                    <legend class="sr-only">Dados para simulação de compra</legend>
+
+                    <div class="input-group">
+                        <label for="renda-mensal">Qual sua renda mensal?</label>
+                        <div class="input-wrapper">
+                            <span>R$</span>
+                            <input type="text" id="renda-mensal" placeholder="Ex: 2.500,00" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-group">
+                            <label for="gastos-fixos">Quais são seus gastos fixos?<br><small>(Aluguel, contas)</small></label>
+                            <div class="input-wrapper">
+                                <span>R$</span>
+                                <input type="text" id="gastos-fixos" placeholder="Ex: 1.750,00" required>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="gastos-variaveis">Quais são seus gastos variáveis?<br><small>(Lazer, extras)</small></label>
+                            <div class="input-wrapper">
+                                <span>R$</span>
+                                <input type="text" id="gastos-variaveis" placeholder="Ex: 400,00" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="valor-compra">Qual o valor da compra desejada?</label>
+                        <div class="input-wrapper">
+                            <span>R$</span>
+                            <input type="text" id="valor-compra" placeholder="Ex: 5.000,00" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-group">
+                            <label for="num-parcelas">Qual o número de parcelas?</label>
+                            <div class="input-wrapper">
+                                <select id="num-parcelas">
+                                    <option value="1">1x (À vista)</option>
+                                    <option value="2">2x</option>
+                                    <option value="3">3x</option>
+                                    <option value="4">4x</option>
+                                    <option value="5">5x</option>
+                                    <option value="6" selected>6x</option>
+                                    <option value="10">10x</option>
+                                    <option value="12">12x</option>
+                                    <option value="24">24x</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="juros-parcelamento">Qual o juros do parcelamento?<br><small>(Se houver)</small></label>
+                            <div class="input-wrapper">
+                                <input type="text" id="juros-parcelamento" placeholder="Ex: 0" value="0">
+                                <span>% a.m.</span>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="btn-calculate">Calcular Minha Compra</button>
+            </form>
+
+            <section class="resultados-container" aria-live="polite">
+                
+                <div id="alerta-orcamento" class="alert-box alert-success" style="display: none;">
+                    <strong id="alerta-titulo">Pode comprar!</strong>
+                    <p id="alerta-texto">A parcela cabe no seu orçamento.</p>
+                </div>
+
+                <article class="card card-neon main-result-card">
+                    <div class="results-top grid-3-col">
+                        <div class="result-card">
+                            <h3>Total a pagar</h3>
+                            <output id="out-total" class="value white">R$ 0,00</output>
+                        </div>
+                        <div class="result-card">
+                            <h3>Duração</h3>
+                            <output id="out-duracao" class="value white">0 meses</output>
+                        </div>
+                        <div class="result-card">
+                            <h3 id="label-falta">Falta por mês</h3>
+                            <output id="out-falta" class="value red">-R$ 0,00</output>
+                        </div>
+                    </div>
+                    
+                    <div class="result-card full-width mt-20">
+                        <div class="flex-between">
+                            <h3>Valor por mês</h3>
+                            <output id="out-parcela" class="value white">R$ 0,00</output>
+                        </div>
+                        <p id="out-detalhe-parcelas" class="text-small text-muted mt-10">0x R$0,00</p>
+                        <p id="out-msg-erro" class="text-small text-danger text-right" style="display: none;">Não cabe na renda mensal</p>
+                    </div>
+                </article>
+
+                <div class="results-top mt-20">
+                    <div class="result-card neon-border">
+                        <h3>Quanto sobra por mês</h3>
+                        <output id="out-sobra" class="value neon">R$ 0,00</output>
+                    </div>
+                    <div class="result-card neon-border">
+                        <h3>Valor da Parcela</h3>
+                        <output id="out-parcela-destaque" class="value neon">R$ 0,00</output>
+                    </div>
+                </div>
+
+                <figure class="chart-container card card-neon mt-20">
+                    <figcaption id="chart-titulo">DINHEIRO ACUMULADO — COMPRA À VISTA</figcaption>
+                   <div class="bar-chart" aria-hidden="true">
+                        <div class="bar dynamic-bar"><span class="rotulo-barra"></span></div>
+                        <div class="bar dynamic-bar"><span class="rotulo-barra"></span></div>
+                        <div class="bar dynamic-bar"><span class="rotulo-barra"></span></div>
+                        <div class="bar dynamic-bar"><span class="rotulo-barra"></span></div>
+                        <div class="bar dynamic-bar"><span class="rotulo-barra"></span></div>
+                        <div class="bar dynamic-bar"><span class="rotulo-barra"></span></div>
+                        <div class="bar dynamic-bar"><span class="rotulo-barra"></span></div>
+                        <div class="bar dynamic-bar"><span class="rotulo-barra"></span></div>
+                    </div>
+                    <div class="chart-footer flex-between mt-10">
+                        <div class="chart-info text-center">
+                            <span class="text-muted text-small">Meta</span>
+                            <p id="out-meta" class="text-main font-bold">R$ 0,00</p>
+                        </div>
+                        <div class="chart-info text-center">
+                            <span class="text-muted text-small">Compra à vista em:</span>
+                            <p id="out-meses-poupanca" class="text-main font-bold">0 meses</p>
+                        </div>
+                    </div>
+                </figure>
+            </section>
+
+        </div>
+    </main>
+    
+    <footer>
+        <div class="conteudoFooter">
+            <p>2026 dindin. Projeto feito por Guilherme Rivera e João Nakazoni para as matérias de Fundamentos de Web e Usabilidade e Interface Humano-Computador.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
 </body>
 </html>
