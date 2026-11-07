@@ -300,3 +300,292 @@ footer {
 }
 /*footer FIM*/
 /*Homepage FIM*/
+
+/*Calculadora INICIO*/
+.conteudoCalculadora {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: 'Poppins', 'Inter', sans-serif;
+    color: #FFFFFF;
+}
+
+.page-title {
+    color: #00E676;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.layout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+
+.card {
+    background-color: #262626;
+    border-radius: 12px;
+    padding: 30px;
+    border: 1px solid #444444;
+}
+
+.card-neon {
+    border: 1px solid #00E676;
+}
+
+.card h2 {
+    font-size: 22px;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+
+fieldset { 
+    border: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+.sr-only { 
+    position: absolute; 
+    width: 1px; 
+    height: 1px; 
+    padding: 0; 
+    margin: -1px; 
+    overflow: hidden; 
+    clip: rect(0, 0, 0, 0); 
+    border: 0; 
+}
+
+.input-group { 
+    margin-bottom: 20px; 
+}
+
+.input-group label { 
+    display: block; 
+    font-size: 14px; 
+    margin-bottom: 8px; 
+    color: #FFFFFF; 
+}
+
+.input-group small { 
+    font-size: 11px; 
+    color: #A0A0A0; 
+}
+
+.input-wrapper {
+    display: flex;
+    background-color: #1E1E1E;
+    border: 1px solid #444444;
+    border-radius: 8px;
+    padding: 12px 15px;
+    align-items: center;
+}
+
+.input-wrapper span { 
+    color: #A0A0A0; 
+    margin-right: 10px; 
+    font-weight: 500; 
+}
+
+.input-wrapper input, .input-wrapper select {
+    background: transparent;
+    border: none;
+    color: #FFFFFF;
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.input-wrapper select option { 
+    background-color: #1E1E1E; 
+}
+
+.row { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; 
+}
+
+.btn-calculate {
+    width: 100%;
+    background-color: #4DF5E8;
+    color: #1E1E1E;
+    border: none;
+    padding: 18px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn-calculate:hover { 
+    background-color: #00E676; 
+}
+
+/* Resultados e Alertas */
+.alert-box { 
+    padding: 15px 20px; 
+    border-radius: 8px; 
+    margin-bottom: 20px; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 5px; 
+}
+
+.alert-success { 
+    background-color: rgba(0, 230, 118, 0.1); 
+    border-left: 4px solid #00E676; 
+}
+
+.alert-success strong { 
+    color: #00E676; 
+}
+
+.alert-danger { 
+    background-color: rgba(255, 77, 77, 0.1); 
+    border-left: 4px solid #FF4D4D; 
+}
+
+.alert-danger strong { 
+    color: #FF4D4D; 
+}
+
+.results-top { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px; 
+}
+
+.grid-3-col { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 15px; 
+}
+
+.result-card {
+    background-color: #1E1E1E;
+    border-radius: 8px;
+    padding: 15px;
+    border: 1px solid #444444;
+    box-sizing: border-box;
+}
+
+.result-card.neon-border { 
+    border-color: rgba(0, 230, 118, 0.4); 
+}
+
+.result-card h3 { 
+    font-size: 14px; 
+    color: #FFFFFF; 
+    font-weight: 500; 
+    margin-bottom: 8px; 
+}
+
+.result-card output { 
+    display: block; 
+    font-size: 18px; 
+    font-weight: 700; 
+}
+
+.result-card .value.neon { 
+    color: #00E676; 
+    font-size: 22px; 
+}
+
+.result-card .value.white { 
+    color: #FFFFFF; 
+}
+
+.result-card .value.red { 
+    color: #FF4D4D; 
+}
+
+.full-width { 
+    width: 100%; 
+    box-sizing: border-box; 
+    margin-top: 15px; 
+}
+
+.text-small { font-size: 13px; }
+.text-muted { color: #FFFFFF; }
+.text-danger { color: #FF4D4D; font-weight: 600; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+.text-main { color: #FFFFFF; }
+.font-bold { font-weight: 700; }
+.mt-10 { margin-top: 10px; }
+.mt-20 { margin-top: 20px; }
+.flex-between { display: flex; justify-content: space-between; align-items: center; }
+
+
+
+.chart-container { 
+    margin-top: 20px; 
+    background-color: #1E1E1E; 
+    border: 1px solid #444444; 
+    padding: 20px; 
+}
+
+.chart-container figcaption {
+    font-size: 12px;
+    color: #FFFFFF;
+    margin-bottom: 35px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.chart-container figcaption::before { 
+    content: ''; 
+    display: block; 
+    width: 4px; 
+    height: 14px; 
+    background-color: #00E676; 
+}
+
+.bar-chart {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 160px;
+    gap: 24px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #444444;
+}
+
+.bar {
+    flex: 1;
+    background-color: #00E676;
+    border-radius: 4px 4px 0 0;
+    opacity: 0.85;
+    transition: height 0.5s ease-in-out;
+    height: 5%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.rotulo-barra {
+    position: absolute;
+    top: -24px;
+    font-size: 10px;
+    font-weight: 600;
+    color: #00E676;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+@media (max-width: 900px) {
+    .layout-grid, .grid-3-col, .row, .results-top { grid-template-columns: 1fr; }
+}
+/*Calculadora FIM*/
