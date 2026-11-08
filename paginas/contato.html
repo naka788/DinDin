@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="João Pedro Nakazoni, Guilherme Rivera">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="../style.css">
@@ -28,3 +27,84 @@
     </label>
     <label>Modo Escuro</label>
     </div>
+
+    <main class="conteudoCalculadora">
+        <h1 class="page-title">Relatar Problema ou Inconsistência</h1>
+
+        <div class="container-suporte-unico">
+            
+            <form id="form-contato" class="card card-neon">
+                <h2>Central de Ajuda & Feedback</h2>
+                <p class="text-small text-muted mb-20">Encontrou algum bug, erro de cálculo ou falha visual? Envie sua mensagem para nossa equipe.</p>
+                
+                <fieldset>
+                    <legend class="sr-only">Formulário de Relato de Problemas</legend>
+
+                    <div class="input-group input-block">
+                        <label for="nome-contato">Seu Nome Completo *</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="nome-contato" placeholder="nome sobrenome" required minlength="3">
+                        </div>
+                    </div>
+
+                    <div class="input-group input-block">
+                        <label for="email-contato">Seu E-mail de Contato *</label>
+                        <div class="input-wrapper">
+                            <input type="email" id="email-contato" placeholder="nome@email.com" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group input-block">
+                        <label for="tipo-problema">Tipo de Inconsistência / Assunto *</label>
+                        <div class="input-wrapper">
+                            <select id="tipo-problema" required>
+                                <option value="">Selecione uma opção...</option>
+                                <option value="calculo">Erro / Divergência nos Cálculos</option>
+                                <option value="visual">Problema Visual / Layout quebrado</option>
+                                <option value="conteudo">Dúvida ou Erro nos Textos</option>
+                                <option value="sugestao">Sugestão de Melhoria</option>
+                                <option value="outro">Outro assunto</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="input-group input-block">
+                        <label>Em qual página o problema ocorreu? *</label>
+                        <div class="radio-group-container mt-10">
+                            <label class="radio-label">
+                                <input type="radio" name="pagina-problema" value="homepage" required> Homepage
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="pagina-problema" value="primeirosPassos"> Primeiros Passos
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="pagina-problema" value="investimentos"> Investimentos
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="pagina-problema" value="calculadora"> Calculadora de Compra
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="input-group input-block">
+                        <label for="mensagem-contato">Descrição Detalhada da Inconsistência *</label>
+                        <div class="input-wrapper textarea-wrapper">
+                            <textarea id="mensagem-contato" rows="6" placeholder="Descreva detalhadamente o que aconteceu e como reproduzir o erro..." required minlength="15"></textarea>
+                        </div>
+                    </div>
+
+                </fieldset>
+
+                <button type="submit" class="btn-calculate">Enviar Relato</button>
+            </form>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="conteudoFooter">
+            <p>© 2026 dindin. Projeto feito por Guilherme Rivera e João Nakazoni para as matérias de Fundamentos de Web e Usabilidade e Interface Humano-Computador.</p>
+        </div>
+    </footer>
+</body>
+</html>

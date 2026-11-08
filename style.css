@@ -683,7 +683,6 @@ fieldset {
     margin-bottom: 30px;
 }
 
-/* Barra de Progresso no Topo */
 .progresso-wrapper {
     margin-bottom: 40px;
 }
@@ -712,7 +711,6 @@ fieldset {
     transition: width 0.4s ease;
 }
 
-/* Lista de Cards de Passos */
 .passos-lista {
     display: flex;
     flex-direction: column;
@@ -720,7 +718,7 @@ fieldset {
 }
 
 .card-passo {
-    background-color: #0D131F; /* Tom azul-escuro das imagens enviadas */
+    background-color: #0D131F;
     border: 1px solid #1E293B;
     border-radius: 16px;
     padding: 35px;
@@ -762,7 +760,6 @@ fieldset {
     margin-bottom: 25px;
 }
 
-/* Cards Duplos e Triplos Internos */
 .cards-duplos {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -795,7 +792,6 @@ fieldset {
     line-height: 1.5;
 }
 
-/* Caixas de Exercício e Dica */
 .caixa-destaque {
     background-color: #070C14;
     border: 1px solid #1E293B;
@@ -807,7 +803,6 @@ fieldset {
     line-height: 1.5;
 }
 
-/* Rodapé do Card com o Botão */
 .passo-rodape {
     display: flex;
     justify-content: space-between;
@@ -844,7 +839,6 @@ fieldset {
     border-color: #00E676;
 }
 
-/* Card dos Próximos Passos (Fim da Página) */
 .card-proximos-passos {
     background-color: #1A1D24;
     border: 1px solid #2A2E39;
@@ -878,7 +872,6 @@ fieldset {
     line-height: 1.5;
 }
 
-/* Responsividade para telas menores */
 @media (max-width: 768px) {
     .cards-duplos, .cards-triplos {
         grid-template-columns: 1fr;
@@ -891,3 +884,60 @@ fieldset {
 }
 
 /*Primerios passos FIM*/
+
+/*Suporte INICIO*/
+.container-suporte-unico {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.input-group.input-block {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 22px;
+}
+
+.input-group.input-block label {
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.textarea-wrapper {
+    padding: 12px 15px !important;
+    height: auto !important;
+}
+
+.textarea-wrapper textarea {
+    background: transparent;
+    border: none;
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    width: 100%;
+    outline: none;
+    resize: vertical;
+    min-height: 140px;
+}
+
+.radio-group-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.radio-label {
+    font-size: 14px;
+    color: #DDDDDD;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.radio-label input[type="radio"] {
+    accent-color: #00E676;
+}
+/*Suporte FIM*/
