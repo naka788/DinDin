@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     
-    // Função auxiliar universal para tratar entradas numéricas
+    // Helper de conversão numérica unificado
     const parseValor = (val) => {
         if (val === null || val === undefined || val === "") return 0;
         if (typeof val === "number") return val;
@@ -14,10 +14,52 @@ document.addEventListener("DOMContentLoaded", () => {
         return parseFloat(str) || 0;
     };
 
+    // Helper de formatação de moeda unificado
     const formatarMoeda = (val) => val.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
     // ==========================================
-    // MÓDULO 1: SIMULADOR DE INVESTIMENTOS
+    // MÓDULO 1: PRIMEIROS PASSOS (NOVO)
+    // ==========================================
+    const botoesConcluir = document.querySelectorAll(".btn-concluir");
+    const progressoTexto = document.getElementById("progresso-texto");
+    const progressoBarra = document.getElementById("progresso-barra-preenchimento");
+
+    if (botoesConcluir.length > 0) {
+        const totalPassos = botoesConcluir.length;
+        const concluidos = new Array(totalPassos).fill(false);
+
+        const atualizarProgresso = () => {
+            const qtdConcluidos = concluidos.filter(Boolean).length;
+            const porcentagem = (qtdConcluidos / totalPassos) * 100;
+            
+            if (progressoTexto) {
+                progressoTexto.innerText = `${qtdConcluidos} de ${totalPassos} concluídas`;
+            }
+            if (progressoBarra) {
+                progressoBarra.style.width = `${porcentagem}%`;
+            }
+        };
+
+        botoesConcluir.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                const index = parseInt(btn.getAttribute("data-index"));
+                concluidos[index] = !concluidos[index];
+
+                if (concluidos[index]) {
+                    btn.classList.add("concluido");
+                    btn.innerText = "Concluído!";
+                } else {
+                    btn.classList.remove("concluido");
+                    btn.innerText = "Concluir leitura";
+                }
+
+                atualizarProgresso();
+            });
+        });
+    }
+
+    // ==========================================
+    // MÓDULO 2: SIMULADOR DE INVESTIMENTOS
     // ==========================================
     const formSimulador = document.getElementById("form-simulador");
     
@@ -45,7 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
 
-        // Cálculo de Valor Futuro com Aportes Recorrentes
         function calcularValorNoMes(pv, pmt, iMensal, nMeses) {
             if (nMeses === 0) return pv;
             let fvInicial = pv * Math.pow(1 + iMensal, nMeses);
@@ -71,7 +112,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
 
-            // Conversão de Taxa Anual (% a.a.) para Mensal equivalente real
             const taxaAnualDecimal = taxaAnualPorcentagem / 100;
             const taxaMensal = taxaAnualDecimal > 0 
                 ? Math.pow(1 + taxaAnualDecimal, 1 / 12) - 1 
@@ -81,14 +121,12 @@ document.addEventListener("DOMContentLoaded", () => {
             const totalInvestido = aporteInicial + (aporteMensal * meses);
             const jurosGanhos = patrimonioFinal - totalInvestido;
 
-            // Renderiza os valores principais nos cards
             outInvestido.innerText = formatarMoeda(totalInvestido);
             outJuros.innerText = "+ " + formatarMoeda(jurosGanhos);
             outPatrimonio.innerText = formatarMoeda(patrimonioFinal);
 
-            // GERAÇÃO DA TABELA DINÂMICA MÊS A MÊS
             if (tabelaCorpo) {
-                tabelaCorpo.innerHTML = ""; // Limpa a tabela anterior
+                tabelaCorpo.innerHTML = "";
 
                 for (let m = 1; m <= meses; m++) {
                     let patrimonioNoMes = calcularValorNoMes(aporteInicial, aporteMensal, taxaMensal, m);
@@ -109,7 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // ==========================================
-    // MÓDULO 2: CALCULADORA DE COMPRA
+    // MÓDULO 3: CALCULADORA DE COMPRA
     // ==========================================
     const formCompra = document.getElementById("form-compra");
     

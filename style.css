@@ -660,3 +660,234 @@ fieldset {
     color: #FFFFFF; 
 }
 /*Calculadora Investimentos FIM*/
+
+/*Primeiros passos INICIO*/
+.conteudoPassos {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: 'Poppins', 'Inter', sans-serif;
+}
+
+.page-title-white {
+    font-size: 32px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+}
+
+.passos-header .subtitle {
+    color: #A0A0A0;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Barra de Progresso no Topo */
+.progresso-wrapper {
+    margin-bottom: 40px;
+}
+
+.progresso-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #A0A0A0;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.progresso-barra-fundo {
+    width: 100%;
+    height: 6px;
+    background-color: #2A2A2A;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progresso-barra-preenchimento {
+    width: 0%;
+    height: 100%;
+    background-color: #00E676;
+    transition: width 0.4s ease;
+}
+
+/* Lista de Cards de Passos */
+.passos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.card-passo {
+    background-color: #0D131F; /* Tom azul-escuro das imagens enviadas */
+    border: 1px solid #1E293B;
+    border-radius: 16px;
+    padding: 35px;
+    color: #FFFFFF;
+}
+
+.passo-topo {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.passo-badge {
+    background-color: #1E293B;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+.passo-topo h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 4px;
+}
+
+.passo-sub {
+    color: #94A3B8;
+    font-size: 13px;
+}
+
+.passo-descricao {
+    font-size: 14px;
+    color: #CBD5E1;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* Cards Duplos e Triplos Internos */
+.cards-duplos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.cards-triplos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.subcard {
+    background-color: #070C14;
+    border: 1px solid #1E293B;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.subcard h4 {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.subcard p {
+    font-size: 13px;
+    color: #94A3B8;
+    line-height: 1.5;
+}
+
+/* Caixas de Exercício e Dica */
+.caixa-destaque {
+    background-color: #070C14;
+    border: 1px solid #1E293B;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: #CBD5E1;
+    line-height: 1.5;
+}
+
+/* Rodapé do Card com o Botão */
+.passo-rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #1E293B;
+}
+
+.leia-proximo {
+    font-size: 12px;
+    color: #64748B;
+}
+
+.btn-concluir {
+    background-color: #1E293B;
+    color: #FFFFFF;
+    border: 1px solid #334155;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-concluir:hover {
+    background-color: #334155;
+}
+
+.btn-concluir.concluido {
+    background-color: #00E676;
+    color: #000000;
+    border-color: #00E676;
+}
+
+/* Card dos Próximos Passos (Fim da Página) */
+.card-proximos-passos {
+    background-color: #1A1D24;
+    border: 1px solid #2A2E39;
+    border-radius: 16px;
+    padding: 35px;
+    margin-top: 40px;
+}
+
+.card-proximos-passos h2 {
+    font-size: 24px;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+}
+
+.subcard-dark {
+    background-color: #0D131F;
+    border: 1px solid #1E293B;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.subcard-dark h4 {
+    color: #FFFFFF;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.subcard-dark p {
+    font-size: 13px;
+    color: #94A3B8;
+    line-height: 1.5;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .cards-duplos, .cards-triplos {
+        grid-template-columns: 1fr;
+    }
+    .passo-rodape {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+}
+
+/*Primerios passos FIM*/
