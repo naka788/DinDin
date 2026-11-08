@@ -301,7 +301,7 @@ footer {
 /*footer FIM*/
 /*Homepage FIM*/
 
-/*Calculadora INICIO*/
+/*Calculadora Compras INICIO*/
 .conteudoCalculadora {
     max-width: 1200px;
     margin: 0 auto;
@@ -428,7 +428,7 @@ fieldset {
     background-color: #00E676; 
 }
 
-/* Resultados e Alertas */
+
 .alert-box { 
     padding: 15px 20px; 
     border-radius: 8px; 
@@ -588,4 +588,75 @@ fieldset {
 @media (max-width: 900px) {
     .layout-grid, .grid-3-col, .row, .results-top { grid-template-columns: 1fr; }
 }
-/*Calculadora FIM*/
+/*Calculadora Compras FIM*/
+
+/*Calculadora Investimentos INICIO*/
+.result-card.destaque {
+    margin-bottom: 20px;
+    border-color: #00E676;
+    background-color: #242424;
+}
+
+.result-card.destaque output {
+    font-size: 30px;
+    color: #00E676;
+}
+
+
+.tabela-container {
+    margin-top: 20px;
+}
+
+.tabela-titulo {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #FFFFFF;
+}
+
+
+.table-scroll {
+    max-height: 260px;
+    overflow-y: auto;
+    border: 1px solid #444444;
+    border-radius: 8px;
+}
+
+
+.tabela-investimentos {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    text-align: left;
+}
+
+.tabela-investimentos th, 
+.tabela-investimentos td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #333333;
+}
+
+
+.tabela-investimentos th {
+    background-color: #151515;
+    color: #00E676;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.tabela-investimentos tbody tr:hover {
+    background-color: rgba(0, 230, 118, 0.05);
+}
+
+
+.text-neon { 
+    color: #00E676; 
+}
+
+.text-bold { 
+    font-weight: 700; 
+    color: #FFFFFF; 
+}
+/*Calculadora Investimentos FIM*/

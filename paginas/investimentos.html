@@ -5,26 +5,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="João Pedro Nakazoni, Guilherme Rivera">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
-    <title>Investimentos</title>
+    <title>dindin. | Investimentos</title>
 </head>
 <body>
     <header>
-        
         <a href="index.html" class="logo">dindin<label>.</label></a>
         <nav class="paginas">
             <a href="/paginas/primeirosPassos.html">Primeiros Passos</a>
             <a href="/paginas/investimentos.html">Investimentos</a>
-            <a href="/paginas/calculadora.html" class="botaoCalculadora">Calculadora de Compra</a>
+            <a href="/paginas/calculadora.html"  class="botaoCalculadora">Calculadora de Compra</a>
         </nav>
     </header>
 
     <div class="toggleEscuro">
-    <label class="switch">
-        <input type="checkbox" checked>
-        <div class="slider"></div> 
-    </label>
-    <label>Modo Escuro</label>
+        <label class="switch">
+            <input type="checkbox" checked>
+            <div class="slider"></div> 
+        </label>
+        <label>Modo Escuro</label>
     </div>
+
+    <main class="conteudoCalculadora">
+        <h1 class="page-title">Simulador de Investimentos</h1>
+
+        <div class="layout-grid">
+            
+            <!-- COLUNA ESQUERDA: FORMULÁRIO DE INVESTIMENTO -->
+            <form id="form-simulador" class="card card-neon">
+                <h2>Sua Projeção</h2>
+                
+                <fieldset>
+                    <legend class="sr-only">Dados para simulação de investimento</legend>
+
+                    <div class="input-group">
+                        <label for="tipo-investimento">Tipo de Investimento</label>
+                        <div class="input-wrapper">
+                            <select id="tipo-investimento">
+                                <option value="0">Personalizado</option>
+                                <option value="10.75">Tesouro Selic (~10.75% a.a.)</option>
+                                <option value="12.00">CDB 100% CDI (~12.00% a.a.)</option>
+                                <option value="6.17">Poupança (~6.17% a.a.)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-group">
+                            <label for="aporte-inicial">Quanto tem para começar?</label>
+                            <div class="input-wrapper">
+                                <span>R$</span>
+                                <input type="number" id="aporte-inicial" placeholder="Ex: 1000" step="any" required>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="aporte-mensal">Quanto vai investir por mês?</label>
+                            <div class="input-wrapper">
+                                <span>R$</span>
+                                <input type="number" id="aporte-mensal" placeholder="Ex: 200" step="any" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-group">
+                            <label for="tempo-meses">Por quanto tempo (meses)?</label>
+                            <div class="input-wrapper">
+                                <input type="number" id="tempo-meses" placeholder="Ex: 12" min="1" required>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="taxa-juros">Taxa de juros anual</label>
+                            <div class="input-wrapper">
+                                <input type="number" id="taxa-juros" placeholder="Ex: 10.75" step="any" required>
+                                <span>% a.a.</span>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="btn-calculate">Simular Rendimento</button>
+            </form>
+
+            <!-- COLUNA DIREITA: RESULTADOS DO INVESTIMENTO -->
+            <section class="resultados-container" aria-live="polite">
+                
+                <div class="result-card destaque">
+                    <h3>Patrimônio Total Estimado</h3>
+                    <output id="out-patrimonio">R$ 0,00</output>
+                </div>
+
+                <div class="results-top">
+                    <div class="result-card">
+                        <h3>Total Investido</h3>
+                        <output id="out-investido" class="value white">R$ 0,00</output>
+                    </div>
+                    <div class="result-card">
+                        <h3>Rendimento (Juros)</h3>
+                        <output id="out-juros" class="value neon">+ R$ 0,00</output>
+                    </div>
+                </div>
+
+                <!-- TABELA DINÂMICA DE EVOLUÇÃO MÊS A MÊS -->
+                <div class="tabela-container card card-neon mt-20">
+                    <h3 class="tabela-titulo">Evolução Mês a Mês</h3>
+                    <div class="table-scroll">
+                        <table class="tabela-investimentos">
+                            <thead>
+                                <tr>
+                                    <th>Mês</th>
+                                    <th>Investido</th>
+                                    <th>Juros Acumulados</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabela-corpo">
+                                <tr>
+                                    <td colspan="4" class="text-center text-muted">Preencha o formulário para simular.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer oficial -->
+    <footer>
+        <div class="conteudoFooter">
+            <p>© 2026 dindin. Projeto feito por Guilherme Rivera e João Nakazoni para as matérias de Fundamentos de Web e Usabilidade e Interface Humano-Computador.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
 </body>
 </html>
