@@ -394,10 +394,12 @@ body.modo-claro .subcard-dark h4 {
     overflow: hidden;
 }
 
-.videoSobreNos video {
+.videoSobreNos iframe {
     width: 100%;
+    aspect-ratio: 16 / 9;
     display: block;
     border-radius: 12px;
+    border: none;
 }
 /* Secao de Texto FIM */
 
