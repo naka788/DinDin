@@ -1,5 +1,30 @@
 document.addEventListener("DOMContentLoaded", () => {
-    
+    // ==========================================
+    // MÓDULO 0: MODO ESCURO / MODO CLARO
+    // ==========================================
+    const toggleEscuroInput = document.querySelector(".toggleEscuro input[type='checkbox']");
+
+    if (toggleEscuroInput) {
+        const temaSalvo = localStorage.getItem("dindin_tema");
+        
+        if (temaSalvo === "claro") {
+            document.body.classList.add("modo-claro");
+            toggleEscuroInput.checked = false;
+        } else {
+            document.body.classList.remove("modo-claro");
+            toggleEscuroInput.checked = true;
+        }
+
+        toggleEscuroInput.addEventListener("change", () => {
+            if (toggleEscuroInput.checked) {
+                document.body.classList.remove("modo-claro");
+                localStorage.setItem("dindin_tema", "escuro");
+            } else {
+                document.body.classList.add("modo-claro");
+                localStorage.setItem("dindin_tema", "claro");
+            }
+        });
+    }
     // Helper de conversão numérica unificado
     const parseValor = (val) => {
         if (val === null || val === undefined || val === "") return 0;

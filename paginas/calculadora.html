@@ -11,12 +11,12 @@
 <body>
     
     <header>
-        <a href="index.html" class="logo">dindin<label>.</label></a>
+        <a href="../paginas/index.html" class="logo">dindin<label>.</label></a>
         <nav class="paginas">
-            <a href="/paginas/contato.html">Suporte</a>
-            <a href="/paginas/primeirosPassos.html">Primeiros Passos</a>
-            <a href="/paginas/investimentos.html">Investimentos</a>
-            <a href="/paginas/calculadora.html" class="botaoCalculadora">Calculadora de Compra</a>
+            <a href="../paginas/contato.html">Suporte</a>
+            <a href="../paginas/primeirosPassos.html">Primeiros Passos</a>
+            <a href="../paginas/investimentos.html">Investimentos</a>
+            <a href="../paginas/calculadora.html" class="botaoCalculadora">Calculadora de Compra</a>
         </nav>
     </header>
 
@@ -43,7 +43,7 @@
                         <label for="renda-mensal">Qual sua renda mensal?</label>
                         <div class="input-wrapper">
                             <span>R$</span>
-                            <input type="text" id="renda-mensal" placeholder="Ex: 2.500,00" required>
+                            <input type="number" id="renda-mensal" placeholder="Ex: 2.500,00" step="any" required>
                         </div>
                     </div>
 
@@ -52,14 +52,14 @@
                             <label for="gastos-fixos">Quais são seus gastos fixos?<br><small>(Aluguel, contas)</small></label>
                             <div class="input-wrapper">
                                 <span>R$</span>
-                                <input type="text" id="gastos-fixos" placeholder="Ex: 1.750,00" required>
+                                <input type="number" id="gastos-fixos" placeholder="Ex: 1.750,00" step="any" required>
                             </div>
                         </div>
                         <div class="input-group">
                             <label for="gastos-variaveis">Quais são seus gastos variáveis?<br><small>(Lazer, extras)</small></label>
                             <div class="input-wrapper">
                                 <span>R$</span>
-                                <input type="text" id="gastos-variaveis" placeholder="Ex: 400,00" required>
+                                <input type="number" id="gastos-variaveis" placeholder="Ex: 400,00" step="any" required>
                             </div>
                         </div>
                     </div>
@@ -68,7 +68,7 @@
                         <label for="valor-compra">Qual o valor da compra desejada?</label>
                         <div class="input-wrapper">
                             <span>R$</span>
-                            <input type="text" id="valor-compra" placeholder="Ex: 5.000,00" required>
+                            <input type="number" id="valor-compra" placeholder="Ex: 5.000,00" step="any" required>
                         </div>
                     </div>
 
@@ -92,7 +92,7 @@
                         <div class="input-group">
                             <label for="juros-parcelamento">Qual o juros do parcelamento?<br><small>(Se houver)</small></label>
                             <div class="input-wrapper">
-                                <input type="text" id="juros-parcelamento" placeholder="Ex: 0" value="0">
+                                <input type="number" id="juros-parcelamento" placeholder="Ex: 0" value="0" step="any">
                                 <span>% a.m.</span>
                             </div>
                         </div>

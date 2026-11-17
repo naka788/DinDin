@@ -116,6 +116,167 @@ header {
 .switch input:checked + .slider::before {
     left: 23px; 
 }
+
+body.modo-claro {
+    background-color: #F4F6F8;
+    color: #1E293B;
+}
+
+body.modo-claro .toggleEscuro label {
+    color: #1E293B;
+    font-weight: 600;
+}
+
+body.modo-claro .conteudoHomepage,
+body.modo-claro .conteudoCalculadora,
+body.modo-claro .conteudoPassos,
+body.modo-claro .secaoTexto h2,
+body.modo-claro .secaoTexto2 h2,
+body.modo-claro .secaoSobreNos h2,
+body.modo-claro .secaoDevs h2,
+body.modo-claro .divDev span,
+body.modo-claro .page-title-white,
+body.modo-claro .card h2,
+body.modo-claro .tabela-titulo {
+    color: #0F172A;
+}
+
+body.modo-claro .secaoTexto p,
+body.modo-claro .listaTexto2 li,
+body.modo-claro .secaoSobreNos p,
+body.modo-claro .passos-header .subtitle {
+    color: #334155;
+}
+
+body.modo-claro .page-title,
+body.modo-claro .textoDestacadoTitulo,
+body.modo-claro .result-card .value.neon,
+body.modo-claro .result-card.destaque output,
+body.modo-claro .text-neon,
+body.modo-claro .rotulo-barra {
+    color: #00994D;
+}
+
+body.modo-claro .card,
+body.modo-claro .result-card,
+body.modo-claro .result-card.destaque,
+body.modo-claro .chart-container {
+    background-color: #FFFFFF;
+    border-color: #CBD5E1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+body.modo-claro .card-neon {
+    border-color: #00A859;
+}
+
+body.modo-claro .input-group label,
+body.modo-claro .result-card h3,
+body.modo-claro .result-card .value.white,
+body.modo-claro .text-muted,
+body.modo-claro .text-main,
+body.modo-claro .text-bold,
+body.modo-claro .chart-container figcaption,
+body.modo-claro .radio-label {
+    color: #1E293B;
+}
+
+body.modo-claro .input-wrapper {
+    background-color: #F8FAFC;
+    border-color: #CBD5E1;
+}
+
+body.modo-claro .input-wrapper input,
+body.modo-claro .input-wrapper select,
+body.modo-claro .textarea-wrapper textarea {
+    color: #0F172A;
+}
+
+body.modo-claro .input-wrapper select option {
+    background-color: #FFFFFF;
+    color: #0F172A;
+}
+
+body.modo-claro .table-scroll {
+    border-color: #CBD5E1;
+}
+
+body.modo-claro .tabela-investimentos th {
+    background-color: #E2E8F0;
+    color: #008040;
+}
+
+body.modo-claro .tabela-investimentos td {
+    border-bottom-color: #E2E8F0;
+    color: #1E293B;
+}
+
+body.modo-claro .tabela-investimentos tbody tr:hover {
+    background-color: rgba(0, 168, 89, 0.08);
+}
+
+body.modo-claro .progresso-barra-fundo {
+    background-color: #CBD5E1;
+}
+
+body.modo-claro .card-passo {
+    background-color: #FFFFFF;
+    border-color: #CBD5E1;
+    color: #1E293B;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+body.modo-claro .passo-topo h2 {
+    color: #0F172A;
+}
+
+body.modo-claro .passo-sub,
+body.modo-claro .subcard p,
+body.modo-claro .subcard-dark p {
+    color: #475569;
+}
+
+body.modo-claro .passo-descricao,
+body.modo-claro .caixa-destaque {
+    color: #334155;
+}
+
+body.modo-claro .subcard,
+body.modo-claro .caixa-destaque,
+body.modo-claro .subcard-dark {
+    background-color: #F8FAFC;
+    border-color: #E2E8F0;
+}
+
+body.modo-claro .passo-rodape {
+    border-top-color: #E2E8F0;
+}
+
+body.modo-claro .btn-concluir {
+    background-color: #E2E8F0;
+    color: #0F172A;
+    border-color: #CBD5E1;
+}
+
+body.modo-claro .btn-concluir:hover {
+    background-color: #CBD5E1;
+}
+
+body.modo-claro .btn-concluir.concluido {
+    background-color: #00E676;
+    color: #000000;
+    border-color: #00E676;
+}
+
+body.modo-claro .card-proximos-passos {
+    background-color: #E2E8F0;
+    border-color: #CBD5E1;
+}
+
+body.modo-claro .card-proximos-passos h2,
+body.modo-claro .subcard-dark h4 {
+    color: #0F172A;
+}
 /*botao de modo escuro FIM*/
 
 /*Homepage INICIO*/
